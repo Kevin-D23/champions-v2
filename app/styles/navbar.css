@@ -1,0 +1,195 @@
+/* General styling */
+nav h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--clr-accent-400);
+  text-shadow: 3px 3px 3.3px rgba(0, 0, 0, 25%);
+  overflow: hidden;
+}
+
+/* Desktop Styling */
+
+.navbar {
+  display: block;
+  height: 100px;
+}
+
+.navbar h1 {
+  overflow: visible;
+}
+
+.navbar-container {
+  max-width: 1320px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  gap: 3rem;
+}
+
+.navbar ul li {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--clr-primary);
+}
+
+@media (min-width: 576px) {
+  .navbar div {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar div {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar div {
+    max-width: 1200px;
+  }
+}
+/* Mobile Styling */
+
+.mobile-navbar {
+  display: none;
+  flex-direction: column;
+  justify-content: start;
+  transition: all 0.5s ease-in-out;
+  height: 80px;
+}
+
+.mobile-navbar h1 {
+  flex-basis: 50%;
+}
+
+.mobile-navbar button {
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-nav-btn-container {
+  display: flex;
+  align-items: center;
+  flex-basis: 50%;
+  justify-content: end;
+}
+
+.mobile-navbar .mobile-nav-container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.75rem;
+  position: relative;
+  background-color: white;
+  align-items: center;
+  height: 80px;
+}
+
+.mobile-nav-ul-container {
+  margin: auto;
+  background-color: transparent;
+  width: 100%;
+  position: absolute;
+  z-index: 8;
+  top: 80px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  padding: 0.75rem;
+  max-height: 50vh;
+}
+
+.mobile-navbar ul {
+  transition: ease all 500ms;
+  overflow: hidden;
+  flex-direction: column;
+  width: 100%;
+  align-items: start;
+  list-style: none;
+}
+
+.mobile-navbar ul li {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--clr-accent-400);
+  border-bottom: 1px solid #e8e8e8;
+  height: auto;
+}
+
+.mobile-navbar ul li a {
+  margin-bottom: 1px;
+  display: block;
+  padding: 7px 8px;
+  border-radius: 5px;
+}
+
+.mobile-navbar .show-nav {
+  height: unset;
+}
+
+.show-nav {
+  height: 17rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.open-nav,
+.close-nav {
+  display: none;
+}
+
+.active-nav-btn {
+  display: block;
+}
+
+@media (min-width: 576px) {
+  .mobile-navbar .mobile-nav-container,
+  .mobile-nav-ul-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-navbar .mobile-nav-container,
+  .mobile-nav-ul-container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    display: none;
+  }
+  .mobile-navbar {
+    display: flex;
+  }
+}
+
+/* Call Button Styling */
+.call-btn {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  gap: 6px;
+}
+
+.call-btn .text {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--clr-secondary);
+}
+
+.call-btn .number {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--clr-accent-400);
+}

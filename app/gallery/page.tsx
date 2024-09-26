@@ -1,15 +1,15 @@
-import "./styles/home.css";
 import { Metadata } from "next";
-import Navbar from "./components/navbar";
-import MobileNavbar from "./components/mobile-navbar";
-import Image from "next/image";
-import anthony from "./images/anthony.jpg"
+import Navbar from "../components/navbar";
+import MobileNavbar from "../components/mobile-navbar";
 
 export const metadata: Metadata = {
-  title: "Champions Cleaning Solutions | Expert Carpet Cleaning & More",
+  title: "Champions Cleaning Solutions | Gallery",
   description:
-    "Champions Cleaning Solutions offers professional carpet cleaning, window cleaning, tile cleaning, and more. Our expert team ensures your home or business shines like new. Contact us for top-quality cleaning services today!",
+    "Browse our gallery to see examples of our exceptional cleaning work. Discover before-and-after photos showcasing our services in action, highlighting the quality and care we put into every project.",
   keywords: [
+    "gallery",
+    "champions carpet cleaning gallery",
+    "champions cleaning solutions gallery",
     "carpet cleaning",
     "carpet cleaning near me",
     "carpet cleaning yuba city",
@@ -50,26 +50,30 @@ export const metadata: Metadata = {
   openGraph: {
     url: "https://championscleaningsolutions.com",
     type: "website",
-    title: "Champions Cleaning Solutions | Expert Carpet Cleaning & More",
+    title: "Champions Cleaning Solutions | Gallery",
     description:
-      "Champions Cleaning Solutions offers professional carpet cleaning, window cleaning, tile cleaning, and more. Our expert team ensures your home or business shines like new. Contact us for top-quality cleaning services today!",
+      "Browse our gallery to see examples of our exceptional cleaning work. Discover before-and-after photos showcasing our services in action, highlighting the quality and care we put into every project.",
   },
   alternates: {
     canonical: "https://championscleaningsolutions.com",
   },
 };
 
-export default function Home() {
+export default function Gallery() {
   return (
     <>
-      <Navbar path="home" />
-      <MobileNavbar path="home" />
+      <Navbar path="gallery" />
+      <MobileNavbar path="gallery" />
       <main>
-        <div className="landing-page-container">
-          <Image src={anthony} alt="champions cleaning" />
-        </div>
+        <div
+          style={{
+            height: "30rem",
+            background: "red",
+            zIndex: 9,
+            position: "relative",
+          }}
+        ></div>
       </main>
-      <footer></footer>
     </>
   );
 }

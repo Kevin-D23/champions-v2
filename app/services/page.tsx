@@ -1,15 +1,15 @@
-import "./styles/home.css";
 import { Metadata } from "next";
-import Navbar from "./components/navbar";
-import MobileNavbar from "./components/mobile-navbar";
-import Image from "next/image";
-import anthony from "./images/anthony.jpg"
+import Navbar from "../components/navbar";
+import MobileNavbar from "../components/mobile-navbar";
 
 export const metadata: Metadata = {
-  title: "Champions Cleaning Solutions | Expert Carpet Cleaning & More",
+  title: "Champions Cleaning Solutions | Services",
   description:
-    "Champions Cleaning Solutions offers professional carpet cleaning, window cleaning, tile cleaning, and more. Our expert team ensures your home or business shines like new. Contact us for top-quality cleaning services today!",
+    "Explore our comprehensive range of cleaning services tailored to meet your needs. From carpet and upholstery cleaning to window and solar panel cleaning, we provide top-quality solutions for residential and commercial clients. Contact us for a free estimate!",
   keywords: [
+    "services",
+    "champions carpet cleaning services",
+    "champions cleaning solutions services",
     "carpet cleaning",
     "carpet cleaning near me",
     "carpet cleaning yuba city",
@@ -50,26 +50,22 @@ export const metadata: Metadata = {
   openGraph: {
     url: "https://championscleaningsolutions.com",
     type: "website",
-    title: "Champions Cleaning Solutions | Expert Carpet Cleaning & More",
+    title: "Champions Cleaning Solutions | Services",
     description:
-      "Champions Cleaning Solutions offers professional carpet cleaning, window cleaning, tile cleaning, and more. Our expert team ensures your home or business shines like new. Contact us for top-quality cleaning services today!",
+      "Explore our comprehensive range of cleaning services tailored to meet your needs. From carpet and upholstery cleaning to window and solar panel cleaning, we provide top-quality solutions for residential and commercial clients. Contact us for a free estimate!",
   },
   alternates: {
     canonical: "https://championscleaningsolutions.com",
   },
 };
 
-export default function Home() {
+export default function Services() {
   return (
     <>
-      <Navbar path="home" />
-      <MobileNavbar path="home" />
-      <main>
-        <div className="landing-page-container">
-          <Image src={anthony} alt="champions cleaning" />
-        </div>
-      </main>
-      <footer></footer>
+      <Navbar path="services" />
+      <MobileNavbar path="services" />
+      <main><div style={{height:"30rem", background:"blue", zIndex:9, position:"relative"}}></div></main>
+
     </>
   );
 }
