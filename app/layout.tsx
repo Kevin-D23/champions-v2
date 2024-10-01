@@ -54,7 +54,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable}`}
         suppressHydrationWarning={true}
       >
-        <AnimatePresence>{children}</AnimatePresence>
+        <AnimatePresence mode="wait">{children}</AnimatePresence>
       </body>
     </html>
   );
