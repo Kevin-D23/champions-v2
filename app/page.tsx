@@ -110,7 +110,7 @@ export default function Home() {
                 facilities
               </h1>
               <p>Our staff is trained to clean everything you need</p>
-              <a href="#">Learn More</a>
+              <a href="#about">Learn More</a>
             </TextTransitionUp>
           </div>
         </div>

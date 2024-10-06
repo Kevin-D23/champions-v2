@@ -30,6 +30,9 @@
   display: none;
   flex-wrap: wrap;
   justify-content: center;
+  z-index: 100;
+  position: relative;
+
 }
 
 .mobile-landing-text div {
