@@ -13,7 +13,12 @@ export default function MessageForm() {
   });
 
   // Handler for input changes
-  const handleChange = (e: any) => {
+  const handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLSelectElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
@@ -21,7 +26,7 @@ export default function MessageForm() {
     }));
   };
 
-  const handlePhoneChange = (e: any) => {
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     // Remove all non-digit characters
     const input = e.target.value.replace(/\D/g, "");
 
@@ -49,7 +54,7 @@ export default function MessageForm() {
   };
 
   // Handler for form submission
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(); // Prevent page reload
     console.log("Form Data Submitted: ", formData);
     setMessageSent(true);

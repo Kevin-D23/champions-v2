@@ -10,7 +10,11 @@ export default function CallbackForm() {
   });
 
   // Handler for input changes
-  const handleChange = (e: any) => {
+  const handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
@@ -18,7 +22,7 @@ export default function CallbackForm() {
     }));
   };
 
-  const handlePhoneChange = (e: any) => {
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     // Remove all non-digit characters
     const input = e.target.value.replace(/\D/g, "");
 
@@ -46,7 +50,7 @@ export default function CallbackForm() {
   };
 
   // Handler for form submission
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(); // Prevent page reload
     console.log("Form Data Submitted: ", formData);
     setCallbackSent(true);
@@ -59,7 +63,7 @@ export default function CallbackForm() {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <p className={(callbackSent ? "show-msg " : "") +"success-msg"}>
+      <p className={(callbackSent ? "show-msg " : "") + "success-msg"}>
         <strong>Success!</strong> Your request has been sent to us.
       </p>
       <div>
@@ -105,7 +109,7 @@ export default function CallbackForm() {
           <option value={"Other"}>Other</option>
         </select>
       </div>
-      <button type="submit" >CALL ME BACK</button>
+      <button type="submit">CALL ME BACK</button>
     </form>
   );
 }
