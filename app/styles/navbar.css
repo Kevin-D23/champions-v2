@@ -32,7 +32,7 @@ nav h1 {
   display: flex;
   list-style-type: none;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .navbar ul li {
@@ -41,9 +41,14 @@ nav h1 {
   color: var(--clr-primary);
 }
 
+.navbar div {
+  padding: 0 2rem;
+}
+
 @media (min-width: 576px) {
   .navbar div {
     max-width: 540px;
+    padding: 0;
   }
 }
 
@@ -53,10 +58,15 @@ nav h1 {
   }
 }
 
+@media (min-width: 992px) {
+  .navbar ul {
+    gap: 3rem;
+  }
+}
+
 @media (min-width: 1200px) {
   .navbar div {
     max-width: 1200px;
-    padding: 0 2rem;
   }
 }
 /* Mobile Styling */
@@ -193,4 +203,8 @@ nav h1 {
   font-weight: 600;
   font-size: 1rem;
   color: var(--clr-accent-400);
+}
+
+.call-btn div {
+  padding: 0 !important;
 }

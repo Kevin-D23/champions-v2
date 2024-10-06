@@ -59,7 +59,7 @@ export default function CallbackForm() {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <p className="success-msg">
+      <p className={(callbackSent ? "show-msg " : "") +"success-msg"}>
         <strong>Success!</strong> Your request has been sent to us.
       </p>
       <div>

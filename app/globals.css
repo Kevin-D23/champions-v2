@@ -12,7 +12,7 @@
   --clr-secondary: #777777;
 
   --clr-neutral-400: #ffffff;
-  --clr-netrual-500: #f8f9fa;
+  --clr-neutral-500: #f8f9fa;
 
   --fw-light: 300;
   --fw-regular: 400;
@@ -58,4 +58,46 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+@media (max-width:576px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .service-card-container {
+    width: 50%;
+    flex: 0 0 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .service-card-container {
+    flex: 0 0 auto;
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.container {
+  margin: auto;
 }

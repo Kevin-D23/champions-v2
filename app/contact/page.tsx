@@ -1,6 +1,11 @@
 import { Metadata } from "next";
 import Navbar from "../components/navbar";
 import MobileNavbar from "../components/mobile-navbar";
+import TextTransitionRight from "../components/text-transition-right";
+import TextTransitionUp from "../components/text-transition-up";
+import "../styles/contact.css";
+import "../styles/services.css";
+import MessageForm from "../components/messageFrom";
 
 export const metadata: Metadata = {
   title: "Champions Cleaning Solutions | Contact",
@@ -64,8 +69,38 @@ export default function Contact() {
     <>
       <Navbar path="contact" />
       <MobileNavbar path="contact" />
-      <main><div style={{height:"30rem", background:"red", zIndex:9, position:"relative"}}></div></main>
-
+      <main className="contact">
+        <section className="page-header-section">
+          <div className="page-header-container container">
+            <ul>
+              <li>
+                <a href="/">HOME</a>
+              </li>
+              <li>
+                <span>&gt;</span>
+              </li>
+              <li>
+                <span>CONTACT</span>
+              </li>
+            </ul>
+            <h1>Contact</h1>
+          </div>
+        </section>
+        <section className="contact-container container">
+          <TextTransitionRight className="contact-header" delay={0.5}>
+            <span></span>
+            <div>
+              <h2>GET IN TOUCH</h2>
+            </div>
+          </TextTransitionRight>
+          <TextTransitionUp delay={0.8}>
+            <h3>Send Us A Message</h3>
+          </TextTransitionUp>
+          <div>
+            <MessageForm />
+          </div>
+        </section>
+      </main>
     </>
   );
 }

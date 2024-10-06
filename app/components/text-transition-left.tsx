@@ -13,10 +13,11 @@ const TextTransitionLeft = (props: any) => {
   }, [isInView, mainControls]);
 
   const parentVariants = {
-    hidden: { opacity: 0,x:50 },
+    hidden: { opacity: 0, x: 50 },
     visible: {
-      opacity: 1, x:0,
-      transition: {duration: .75,  ease: "linear", delay:props.delay}
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.75, ease: "linear", delay: props.delay },
     },
   };
 

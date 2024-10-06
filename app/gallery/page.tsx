@@ -1,6 +1,9 @@
 import { Metadata } from "next";
 import Navbar from "../components/navbar";
 import MobileNavbar from "../components/mobile-navbar";
+import "../styles/gallery.css";
+import "../styles/services.css";
+import GalleryClient from "../components/gallery-client";
 
 export const metadata: Metadata = {
   title: "Champions Cleaning Solutions | Gallery",
@@ -60,19 +63,31 @@ export const metadata: Metadata = {
 };
 
 export default function Gallery() {
+
   return (
     <>
       <Navbar path="gallery" />
       <MobileNavbar path="gallery" />
-      <main>
-        <div
-          style={{
-            height: "30rem",
-            background: "red",
-            zIndex: 9,
-            position: "relative",
-          }}
-        ></div>
+      <main className="gallery">
+        <section className="page-header-section">
+          <div className="page-header-container container">
+            <ul>
+              <li>
+                <a href="/">HOME</a>
+              </li>
+              <li>
+                <span>&gt;</span>
+              </li>
+              <li>
+                <span>GALLERY</span>
+              </li>
+            </ul>
+            <h1>Gallery</h1>
+          </div>
+        </section>
+        <section className="gallery-container container">
+          <GalleryClient />
+        </section>
       </main>
     </>
   );

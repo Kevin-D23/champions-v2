@@ -9,17 +9,15 @@ const TextTransitionUp = (props: any) => {
   useEffect(() => {
     if (isInView) {
       mainControls.start("visible");
-    }
-    else if(props.immidiate)
-      mainControls.start("visible");
-
+    } else if (props.immidiate) mainControls.start("visible");
   }, [isInView, mainControls]);
 
   const parentVariants = {
-    hidden: { opacity: 0,y:100 },
+    hidden: { opacity: 0, y: 65 },
     visible: {
-      opacity: 1, y:0,
-      transition: {duration: .5,  ease: "linear", delay:props.delay}
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.65, ease: "easeOut", delay: props.delay },
     },
   };
 

@@ -204,7 +204,7 @@ export default function Home() {
             </TextTransitionRight>
           </div>
         </section>
-        <section className="about-section">
+        <section className="about-section" id="about">
           <div className="about-container">
             <div className="about-container-child">
               <div className="about-text">
@@ -239,7 +239,7 @@ export default function Home() {
                   </p>
                 </TextTransitionUp>
                 <TextTransitionUp delay={1.3}>
-                <a>OUR SERVICES</a>
+                <a href="/services">OUR SERVICES</a>
 
                 </TextTransitionUp>
               </div>

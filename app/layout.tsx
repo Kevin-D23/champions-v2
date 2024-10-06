@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import type { Viewport, Metadata } from "next";
 import { AnimatePresence } from "framer-motion";
+import Footer from "./components/footer";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -55,6 +56,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <AnimatePresence mode="wait">{children}</AnimatePresence>
+        <Footer />
       </body>
     </html>
   );
